@@ -22,6 +22,10 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
+h1 {
+    text-align: center;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -51,9 +55,22 @@ nav a:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* img {
-    size
-} */
+img {
+    width: 250px;
+    height: auto;
+}
+
+.state-flag {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.state-flag img {
+    flex: 45%;
+    padding: 5px;
+    height: auto;
+}
 
 footer {
     text-align: center;
