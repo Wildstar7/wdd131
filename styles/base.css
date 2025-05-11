@@ -55,6 +55,13 @@ nav a:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+.card a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
 img {
     width: 250px;
     height: auto;
