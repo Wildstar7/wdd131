@@ -76,7 +76,6 @@ nav {
     color: var(--text_color);
     font-weight: 700;
     transition: 0.5s;
-    font-size: clamp(1re, 2vmin, 1.5rem);
 }
 
 .show li {
