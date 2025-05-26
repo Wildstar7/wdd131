@@ -1,7 +1,45 @@
+:root {
+    --heading-font: 'Playfair Display', serif;
+    --paragraph-font: 'Noto Serif', serif;
+}
+
 body {
-    font-family: 'Noto Serif', serif;
+    font-family: var(--paragraph-font);
 }
 
 h1, header p {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--heading-font);
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: end;
+    justify-content: end;
+    gap: 1rem;
+}
+
+header nav a {
+    font-family: var(--heading-font);
+    text-decoration: none;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 2rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+    place-items: center;
+}
+
+img {
+    width: 200px;
+    height: auto;
 }
