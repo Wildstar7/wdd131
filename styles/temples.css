@@ -1,22 +1,90 @@
 :root {
+    /* Fonts */
     --heading-font: 'Playfair Display', serif;
     --paragraph-font: 'Noto Serif', serif;
+
+    /* Colors */
+    --background_color: #F8F3EB;
+    --accent_color: #C3A355;
+    --text_color: #333333;
+    --hover_background: rgba(195, 163, 85, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background_color);
 }
 
 body {
     font-family: var(--paragraph-font);
 }
 
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
 h1, header p {
     font-family: var(--heading-font);
+    color: var(--text_color);
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+}
+
+#menu::before {
+    content: "≡";
 }
 
 nav {
+    background-color: var(--background_color);
     display: flex;
     flex-flow: row wrap;
     align-items: end;
     justify-content: end;
     gap: 1rem;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: var(--text_color);
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1re, 2vmin, 1.5rem);
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
 }
 
 header nav a {
@@ -32,6 +100,17 @@ header nav a {
     vertical-align: middle;
 }
 
+nav a:hover {
+    background-color: var(--hover_background);
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+h2 {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -39,7 +118,17 @@ header nav a {
     place-items: center;
 }
 
+.gallery figure {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+
 img {
     width: 200px;
     height: auto;
+}
+
+footer {
+    margin: 1rem;
 }
