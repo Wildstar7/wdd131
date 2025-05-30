@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD131 - Country Page - Kyle Strasdas</title>
+    <meta name="description" content="Country page created for the WDD 131 - Dynamic Web Fundamentals course.">
+    <meta name="author" content="Kyle Strasdas">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Noto+Serif&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Oregon</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="min-width: 1000px">
+                <source srcset="images/hero-medium.webp" media="min-width: 550px">
+                <img src="images/hero-small.webp" alt="Beautiful Oregon Landscape" width="400" height="200">
+            </picture>
+        </div>
+        <div class="data">
+            <h2>Data</h2>
+            <ul>
+                <li>Area: 98,466 sq mi</li>
+                <li>Population: 4,272,371</li>
+                <li>Capital: Salem</li>
+                <li>Language: English</li>
+                <li>Currency: US Dollar</li>
+                <li>Time Zone: UTC-7</li>
+                <li>Area Codes: 503, 971, 541, 458</li>
+                <li>Internet TLD: .us</li>
+            </ul>
+        </div>
+        <div class="Weather">
+            <div class="current-conditions">
+                <p>☔</p>
+            </div>
+            <ul>
+                <li>Temperature: 60°F</li>
+                <li>Conditions: Mostly Cloudy</li>
+                <li>Wind: 5 mph</li>
+                <li>Wind Chill: 58°F</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Kyle Strasdas | Oregon | USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
