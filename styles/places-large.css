@@ -1,0 +1,39 @@
+@media only screen and (min-width: 40em) {
+    .data {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        background-color: rgba(256, 256, 256, 0.4);
+    }
+
+    ul, li {
+        background-color: rgba(256, 256, 256, 0.4);
+        color: var(--background-color);
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 15%;
+        right: 10%;
+        background-color: rgba(256, 256, 256, 0.4);
+        text-align: center;
+    }
+
+    .weather h2{
+        display: block;
+        font-size: 3rem;
+    }
+
+    .weather h3 {
+        display: none;
+    }
+
+    .weather img {
+        width: 0%;
+        height: auto;
+    }
+
+    .current-conditions {
+        background-color: rgba(256, 256, 256, 0.4);
+    }
+}

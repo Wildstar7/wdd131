@@ -1,0 +1,100 @@
+:root {
+    --heading-font: "Playfair Display", "Garamond", serif;
+    --paragraph-font: "Fira Sans", "Arial", sans-serif;
+    --background-color: #104735;
+    --text-color: #D9B382;
+    --accent-color: #5A9BD5;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--paragraph-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    list-style-type: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    color: var(--text-color);
+    text-align: center;
+    background-color: #5A9BD5;
+    width: 99%;
+    margin-top: 2px;
+    color: var(--background-color);
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    padding: 15px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+h2, h3 {
+    font-size: 3rem;
+}
+
+.hero {
+    width: 99%;
+    padding: 4px;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.data {
+    text-align: center;
+    padding: 5px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    margin: 5px;
+}
+
+ul, li {
+    padding: 5px;
+    font-size: 1.6rem;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+.weather {
+    position: relative;
+    text-align: center;
+    background-color: var(--text-color);
+    margin: 5px;
+    padding: 5px;
+}
+
+.weather h2 {
+    display: none;
+}
+
+.weather img {
+    position: relative;
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--text-color);
+}
+
+.current-conditions {
+    background-color: var(--text-color);
+}
+
+footer {
+    font-size: 1.5rem;
+    text-align: center;
+}

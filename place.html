@@ -7,9 +7,12 @@
     <meta name="description" content="Country page created for the WDD 131 - Dynamic Web Fundamentals course.">
     <meta name="author" content="Kyle Strasdas">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/places-large.css">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/place.js" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Noto+Serif&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,34 +21,36 @@
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/hero-large.webp" media="min-width: 1000px">
-                <source srcset="images/hero-medium.webp" media="min-width: 550px">
+                <source srcset="images/hero-large.webp" media="(min-width: 1200px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 750px)">
                 <img src="images/hero-small.webp" alt="Beautiful Oregon Landscape" width="400" height="200">
             </picture>
-        </div>
-        <div class="data">
-            <h2>Data</h2>
-            <ul>
-                <li>Area: 98,466 sq mi</li>
-                <li>Population: 4,272,371</li>
-                <li>Capital: Salem</li>
-                <li>Language: English</li>
-                <li>Currency: US Dollar</li>
-                <li>Time Zone: UTC-7</li>
-                <li>Area Codes: 503, 971, 541, 458</li>
-                <li>Internet TLD: .us</li>
-            </ul>
-        </div>
-        <div class="Weather">
-            <div class="current-conditions">
-                <p>☔</p>
+            <div class="data">
+                <h2>Data</h2>
+                <ul>
+                    <li>Area: 98,466 sq mi</li>
+                    <li>Population: 4,272,371</li>
+                    <li>Capital: Salem</li>
+                    <li>Language: English</li>
+                    <li>Currency: US Dollar</li>
+                    <li>Time Zone: UTC-7</li>
+                    <li>Area Codes: 503/971/541/458</li>
+                    <li>Internet TLD: .us</li>
+                </ul>
             </div>
-            <ul>
-                <li>Temperature: 60°F</li>
-                <li>Conditions: Mostly Cloudy</li>
-                <li>Wind: 5 mph</li>
-                <li>Wind Chill: 58°F</li>
-            </ul>
+            <div class="weather">
+                <h2>Weather 🌥️</h2>
+                <h3>Weather</h3>
+                <div class="current-conditions">
+                    <img src="images/mostly-cloudy.svg" alt="Mostly Cloudy" width="150" height="75">
+                </div>
+                <ul>
+                    <li>Temperature: 64°F</li>
+                    <li>Conditions: Mostly Cloudy</li>
+                    <li>Wind: 3 mph</li>
+                    <li>Wind Chill: n/a</li>
+                </ul>
+            </div>
         </div>
     </main>
     <footer>
