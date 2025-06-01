@@ -38,7 +38,7 @@ h1 {
     letter-spacing: 3px;
 }
 
-h2, h3 {
+h2 {
     font-size: 3rem;
 }
 
@@ -69,6 +69,7 @@ ul, li {
     color: var(--background-color);
 }
 
+
 .weather {
     position: relative;
     text-align: center;
@@ -77,17 +78,25 @@ ul, li {
     padding: 5px;
 }
 
-.weather h2 {
-    display: none;
-}
-
 .weather img {
     position: relative;
     width: 20%;
     height: auto;
     display: block;
     margin: 0 auto;
+    background-color: var(--accent-color);
+    margin-top: 10px;
+    border-radius: 7px;
+    border-color: rgba(90, 155, 213, 0.64);
+    box-shadow: 2px 1px 1px rgba(90, 155, 213, 0.64);
+}
+
+.data span, .weather span {
+    font-weight: bold;
+    color: var(--background-color);
     background-color: var(--text-color);
+    padding-left: 10px;
+    text-align: left;
 }
 
 .current-conditions {
