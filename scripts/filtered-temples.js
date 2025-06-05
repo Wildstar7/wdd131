@@ -142,4 +142,4 @@ function createTempleCard(filteredTemples) {
 
         document.querySelector(".temples").appendChild(card);
     });
-}
+};
