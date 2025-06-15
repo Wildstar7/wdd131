@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form - WDD 131 - Kyle Strasdas</title>
+    <meta name="description" content="Product review form, created for the WDD 131 - Dynamic Web Fundamentals course.">
+    <meta name="author" content="Kyle Strasdas">
+    <link rel="stylesheet" href="styles/review-form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <fieldset>
+                <label>Product Name 
+                    <select id="product-select" name="product" required>    
+                        <option value="" disabled selected>Choose a product...</option>
+                    </select>
+                </label>
+
+                <div>Overall Rating</div>
+                <label><input id="one-star" type="radio" name="rating" required> &star;</label>
+                <label><input id="two-star" type="radio" name="rating" required> &star;&star;</label>
+                <label><input id="three-star" type="radio" name="rating" required> &star;&star;&star;</label>
+                <label><input id="four-star" type="radio" name="rating" required> &star;&star;&star;&star;</label>
+                <label><input id="five-star" type="radio" name="rating" required> &star;&star;&star;&star;&star;</label>
+
+                <label>Date of Installation <input id="install-date" type="date" name="installation-date" required></label>
+
+                <div>Useful features</div>
+                <label><input id="durability" type="checkbox" name="features">Durability</label>
+                <label><input id="ease-of-use" type="checkbox" name="features">Ease of Use</label>
+                <label><input id="performance" type="checkbox" name="features">Performance</label>
+                <label><input id="design" type="checkbox" name="features">Design</label>
+
+                <label>Written Review<input id="review" type="textarea" name="written-review"></label></div>
+
+                <label>Your Name<input id="name" type="text" name="your-name"></label>
+            </fieldset>
+
+            <input type="submit" value = "Send Review">
+
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Kyle Strasdas | Oregon | USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
