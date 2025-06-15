@@ -28,19 +28,13 @@ const products = [
 
 document.addEventListener("DOMContentLoaded", () => {
     const productSelect = document.getElementById("product-select");
-
-    products.forEach(product => {
-        const option = document.createElement("option");
-        option.value = product.name;
-        option.textContent = product.name;
-        option.id = product.id;
-        productSelect.appendChild(option);
-    });
+    if (productSelect) {
+        products.forEach(product => {
+            const option = document.createElement("option");
+            option.value = product.name;
+            option.textContent = product.name;
+            option.id = product.id;
+            productSelect.appendChild(option);
+        });
+    }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    let reviewCount = localStorage.getItem("reviewCount");
-    reviewCount = reviewCount ? Number(reviewCount) : 0;
-    reviewCount ++;
-    localStorage.setItem("reviewCount", reviewCount);
-})
