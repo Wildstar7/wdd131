@@ -27,11 +27,59 @@ body {
     align-items: center;
     padding: 1rem;
     background-color: var(--primary-color);
+    position: relative;
 }
 
 .header-container .logo img {
-    height: 75px;
+    width: 100px;
+    height: auto;
     border-radius: 14px;
+    transition: transform 0.3s ease;
+}
+
+.header-container .logo img:hover,
+.header-container .logo img:focus {
+    transform: scale(1.05);
+}
+
+.hamburger {
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--background-color);
+    transition: all 0.3s ease;
+}
+
+.main-nav {
+    display: none;
+}
+
+.main-nav.show {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 31, 63, 0.9);
+    z-index: 1000;
+}
+
+.main-nav.show ul {
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.main-nav.show li {
+    margin: 1rem 0;
 }
 
 .main-nav ul {
@@ -87,26 +135,24 @@ body {
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    width: 100%;
+    background-color: var(--secondary-color);
     padding: 1.5rem;
     border-radius: 5px;
+    text-align: left;
 }
 
 .hero-content h1 {
     font-family: var(--heading-font);
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
 .hero-content p {
     font-family: var(--paragraph-font);
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
     color: #333;
 }
@@ -120,13 +166,15 @@ body {
 .hero-buttons .btn {
     display: inline-block;
     padding: 0.75rem 1.25rem;
-    font-family: var(--heading-font);
+    font-family: var(--accent-font);
     font-size: 1rem;
+    font-weight: 900;
     text-decoration: none;
     border: 2px solid var(--primary-color);
-    border-radius: 3px;
+    border-radius: 7px;
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
+    margin-top: 0.5rem;
 }
 
 .hero-buttons .book-now {
@@ -139,26 +187,33 @@ body {
     color: var(--primary-color);
 }
 
+.hero-buttons .book-now:hover {
+    scale: 1.07;
+}
+
 .hero-buttons .btn:hover,
 .hero-buttons .btn:focus {
     background-color: var(--primary-color);
     color: var(--background-color);
 }
 
-.reviews {
+.reviews,
+.services {
     padding: 2rem 1rem;
     background-color: #f9f9f9;
-    text-align: center;
+    text-align: left;
 }
 
-.reviews h2 {
+.reviews h2,
+.services h2 {
     font-family: var(--heading-font);
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
 
-.reviews-container {
+.reviews-container,
+.services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
@@ -166,7 +221,8 @@ body {
     margin: 0 auto;
 }
 
-.review {
+.review,
+.service {
     background-color: var(--background-color);
     border: 1px solid var(--secondary-color);
     padding: 1rem;
@@ -174,7 +230,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.review img {
+.review img,
+.service img {
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -197,6 +254,175 @@ body {
     color: var(--primary-color);
 }
 
+.price {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.hero-contact {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--primary-color);
+}
+
+.hero-contact-image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-contact-content {
+    position: relative;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hero-contact-content h1 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.contact {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.contact h1 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 3px;
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    color: #333;
+    background-color: var(--background-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
+}
+
+.contact-form label[for="name"]::after,
+.contact-form label[for="vehicle"]::after,
+.contact-form label[for="email"]::after,
+.contact-form label[for="phone"]::after {
+    content: " *(required)";
+    color: red;
+    font-size: 0.9rem;
+    font-variant-position: super;
+}
+
+.contact-form fieldset.services-check {
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form legend {
+    padding: 0 0.5rem;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.contact-form .services-check div {
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .services-check input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 25px;
+    height: 25px;
+    accent-color: var(--primary-color);
+}
+
+.contact-form .services-check label{
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-form .services-check input[type="checkbox"]:checked,
+.contact-form .services-check input[type="checkbox"]:hover,
+.contact-form .services-check input[type="checkbox"]:focus,
+.contact-form .services-check label:hover,
+.contact-form .services-check label:focus {
+    font-weight: 700;
+    transform: scale(1.01);
+}
+
+.contact-form .submit-btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 14px;
+    font-family: var(--accent-font);
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover,
+.contact-form .submit-btn:focus {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.references ul {
+    list-style: revert;
+    margin-left: revert;
+    padding: revert;
+}
+
 footer {
     background-color: var(--primary-color);
     color: var(--background-color);
@@ -211,8 +437,10 @@ footer {
 }
 
 .footer-logo img {
-    height: 50px;
+    width: 75px;
+    height: auto;
     border-radius: 14px;
+    transition: transform 0.3s ease;
 }
 
 .footer-info {
@@ -226,6 +454,13 @@ footer {
     font-size: 0.9rem;
 }
 
+.footer-info a {
+    color: var(--background-color);
+    font-size: 0.75rem;
+    padding: 0;
+    margin: 0;
+}
+
 .footer-social {
     display: flex;
     align-items: center;
@@ -236,12 +471,14 @@ footer {
 }
 
 .footer-social img {
-    height: 24px;
-    width: 24px;
+    height: 40px;
+    width: 40px;
     transition: transform 0.3s ease;
 }
 
 .footer-social a:hover img,
-.footer-social a:focus img {
+.footer-social a:focus img,
+.footer-logo a:hover img,
+.footer-logo a:focus img {
     transform: scale(1.1);
 }

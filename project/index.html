@@ -32,14 +32,22 @@
             <div class="call-to-action">
                 <a class="book-now" href="contact.html">Book Now!</a>
             </div>
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </header>
     <main>
         <section class="hero">
-            <img loading="lazy" src="https://loremflickr.com/1200/600" alt="High quality auto detailing hero shot" class="hero-image">
+            <picture>
+                <source srcset="images/hero-2.webp" media="(min-width: 768px)">
+                <img loading="lazy" src="images/hero-1.webp" alt="High quality auto detailing hero shot" class="hero-image">
+            </picture>
             <div class="hero-content">
                 <h1>Experience Superior Detailing</h1>
-                <p>Clear Detailing provides services to the Western Oregon area located in Eugene, Oregon. We specialize in high-end automotive paint refinement/correction, paint protection film, ceramic coatings, and full vehicle cleaning and reconditioning. We are proud of the work we do and take care of each and every vehicle we detail.</p>
+                <p>Clear Detailing provides services to the Western Oregon area located in Eugene, Oregon. We specialize in high-end automotive paint refinement/correction, full vehicle cleaning, and reconditioning. We are proud of the work we do and take care of each and every vehicle we detail.</p>
                 <div class="hero-buttons">
                     <a href="contact.html" class="btn book-now">Book Now!</a>
                     <a href="services.html" class="btn learn-more">Learn More</a>
@@ -52,8 +60,8 @@
             <div class="reviews-container">
                 <div class="review">
                     <img 
-                    src="https://loremflickr.com/900/600" 
-                    alt="Client Review 1" 
+                    src="images/steering-wheel.webp" 
+                    alt="Freshly detailed car interior" 
                     loading="lazy">
                     <blockquote>
                         <p>"I never thought my car could look this new again! Crystal Clear Detail transformed every inch of my vehicle—from the gleaming exterior to the spotless interior. Their attention to detail and friendly service have made me a customer for life!"</p>
@@ -63,8 +71,8 @@
 
                 <div class="review">
                     <img 
-                    src="https://loremflickr.com/900/600" 
-                    alt="Client Review 2" 
+                    src="images/mercedes.webp" 
+                    alt="Newly detailed silver Mercedes" 
                     loading="lazy">
                     <blockquote>
                         <p>"Crystal Clear Detail is a game changer for auto care. They meticulously revived my car, giving it a brilliant shine that turns heads wherever I go. I couldn’t be happier with the results and the professional service I received."</p>
@@ -74,8 +82,8 @@
 
                 <div class="review">
                     <img 
-                    src="https://loremflickr.com/900/600" 
-                    alt="Client Review 3" 
+                    src="images/porsche.webp" 
+                    alt="Red Porsche polished to perfection" 
                     loading="lazy">
                     <blockquote>
                         <p>"From start to finish, my experience with Crystal Clear Detail was exceptional. The team handled my car with incredible care, leaving it impeccably detailed. Every visit feels like a luxury treatment, and I highly recommend them!"</p>
@@ -92,10 +100,6 @@
                     <img loading="lazy" src="images/logo.png" alt="Crystal Clear Detail Logo">
                 </a>
             </div>
-            <div class="footer-info">
-                <p>&copy; <span id="currentyear"></span> Kyle Strasdas | Oregon | USA</p>
-                <p id="lastModified"></p>
-            </div>
             <div class="footer-social">
                 <a href="https://instagram.com/" target="_blank">
                     <img loading="lazy" src="images/socials-instagram.png" alt="Instagram Logo">
@@ -104,9 +108,14 @@
                     <img loading="lazy" src="images/socials-facebook.png" alt="Facebook Logo">
                 </a>
                 <a href="https://twitter.com/" target="_blank">
-                    <img loading="lazy" src="images/socials-x.png" alt="X Logo">
+                    <img loading="lazy" src="images/socials-x-white.png" alt="X Logo">
                 </a>
             </div>
+        </div>
+        <div class="footer-info">
+                <p>&copy; <span id="currentyear"></span> Kyle Strasdas | Oregon | USA</p>
+                <p id="lastModified"></p>
+                <a href="references.html">***References***</a>
         </div>
     </footer>
 </body>
